@@ -14,6 +14,9 @@ RUN cp subsync/config.py.template subsync/config.py
 # Install requirements and build
 RUN pip install .
 
+# Create config directory and make accessible to other users
+RUN mkdir /root/config && chmod 777 /root/config
+
 ENTRYPOINT ["/opt/subsync/bin/subsync" , "--cli"]
 
 WORKDIR /working
