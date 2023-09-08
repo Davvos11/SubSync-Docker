@@ -27,3 +27,10 @@ docker run -u 1000 -v /mnt/data2/Series/Brooklyn\ Nine-Nine/Season\ 3/:/working 
     --sub Brooklyn\ Nine-Nine\ -\ S03E09\ -\ The\ Swedes\ Bluray-1080p.en.srt \
     --out Brooklyn\ Nine-Nine\ -\ S03E09\ -\ The\ Swedes\ Bluray-1080p-new.en.srt
 ```
+
+### Batch
+This repository includes a script that will SubSync a complete folder. It assumes the srt and video files have the same name (before the extention)
+```bash
+./batch.sh -d "/location/of/files"
+```
+You can use `-u uid` to specify a uid and `-s` to run the Docker command with sudo.
